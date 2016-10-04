@@ -24,7 +24,7 @@
        * that the right door is opened.
       **/
       function openRightDoor() {
-        document.getElementById("rightDoorStatus").innerHTML = "Open";
+        document.getElementById("rightDoorStatus").innerHTML = "Open"; //right doors open
         document.getElementById("leftDoor").removeAttribute("disabled");
         console.log("Right door opened");
       }
@@ -34,10 +34,11 @@
        * doors so they don't say they're open.
       **/
       function reset(){
-        document.getElementById("rightDoor").setAttribute("disabled", "");
+        document.getElementById("rightDoor").setAttribute("disabled", ""); //right door disabled
+        document.getElementById("resetDoors").setAttribute("disabled", ""); //reset door disabled
+        document.getElementById("leftDoorStatus").innerHTML = ""; //no status
+        document.getElementById("rightDoorStatus").innerHTML = ""; //no status
         window.alert("Everything is reset!");
-        document.getElementById("leftDoorStatus").innerHTML = "";
-        document.getElementById("rightDoorStatus").innerHTML = "";
         console.log("Doors are reset to original status");
       }
     </script>
@@ -68,7 +69,7 @@
         <div class="col-sm-4 offset-sm-2">
 
           <button id="rightDoor" type="button" class="btn btn-primary"
-                  onclick="openRightDoor();">
+                  onclick="openRightDoor();" disabled>
             Open Right Door
           </button>
           <div class="panel panel-default">
