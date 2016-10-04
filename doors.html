@@ -25,7 +25,7 @@
       **/
       function openRightDoor() {
         document.getElementById("rightDoorStatus").innerHTML = "Open"; //right doors open
-        document.getElementById("leftDoor").removeAttribute("disabled");
+        document.getElementById("resetDoors").removeAttribute("disabled");
         console.log("Right door opened");
       }
       /**
@@ -87,7 +87,7 @@
       <div class="row">
         <div class="col-sm-2">
           <button id="resetDoors" type="button" class="btn btn-danger"
-                  onclick="reset();">
+                  onclick="reset();" disabled>
             Reset Doors
           </button>
         </div>
